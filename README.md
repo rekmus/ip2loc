@@ -64,7 +64,14 @@ m
 ```
 (You may need to verify MySQL include and library paths in `m`, depending on your configuration)
 
-### 6. Verify $SILGYDIR in `bin/silgystart` and `bin/silgystop`
-The existing code assumes it's `/home/ec2-user/ip2loc`.
+### 6. Prepare `bin/silgystart` and `bin/silgystop`
+* Verify `$SILGYDIR` is correct (the existing code assumes it's `/home/ec2-user/ip2loc`)
+* Make the executable
 
-### 7. Run `bin/silgystart`
+### 7. Run 
+```
+cd bin
+silgystart
+```
+## Troubleshooting
+`logs` directory should contain something useful. Otherwise I'll be happy to help at silgy.help@gmail.com.
