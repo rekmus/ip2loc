@@ -60,7 +60,7 @@ chmod u+x m
 ### 5. Compile
 ```
 cd src
-m
+./m
 ```
 (You may need to verify MySQL include and library paths in `m`, depending on your configuration)
 
@@ -75,7 +75,7 @@ chmod u+x silgystop
 ### 7. Run 
 ```
 cd bin
-silgystart
+./silgystart
 ```
 ## Troubleshooting
-`logs` directory should contain something useful. Otherwise I'll be happy to help at silgy.help@gmail.com.
+`logs` directory should contain something useful. Anyway I'll be happy to help at silgy.help@gmail.com.
