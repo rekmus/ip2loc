@@ -7,7 +7,7 @@ It shows visits history with location, based on [IP2Location™ LITE IP-COUNTRY]
 It's live here: [silgy.org:2020](http://silgy.org:2020)
 
 ## Installation (UNIX/Linux)
-The demo is running on AWS EC2 Linux instance (`Amazon Linux AMI release 2018.03`).
+The demo is running on [AWS EC2 Linux t2.micro](https://aws.amazon.com/ec2/instance-types/t2) instance (`Amazon Linux AMI release 2018.03`).
 
 ### 1. Install C++ compiler and MySQL:
 ```
