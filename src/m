@@ -1,0 +1,43 @@
+#!/bin/sh
+
+
+echo Making silgy_app...
+
+g++ silgy_app.cpp \
+Cdb.cpp \
+Cvisits.cpp \
+visits_view.cpp \
+Cip2location_db3.cpp \
+../lib/silgy_eng.c ../lib/silgy_lib.c ../lib/silgy_usr.c \
+-I. -I../lib \
+-I/usr/include/mysql \
+-L/usr/lib64/mysql -lmysqlclient \
+-lrt -lz \
+-s -O3 \
+-o ../bin/silgy_app
+
+
+echo Making silgy_svc...
+
+g++ silgy_svc.cpp \
+Cdb.cpp \
+Cvisits.cpp \
+Cip2location_db3.cpp \
+../lib/silgy_eng.c ../lib/silgy_lib.c ../lib/silgy_usr.c \
+-D SILGY_SVC \
+-I. -I../lib \
+-I/usr/include/mysql \
+-L/usr/lib64/mysql -lmysqlclient \
+-lrt \
+-s -O3 \
+-o ../bin/silgy_svc
+
+
+echo Making silgy_watcher...
+
+gcc ../lib/silgy_watcher.c \
+../lib/silgy_lib.c \
+-D SILGY_WATCHER \
+-I. -I../lib \
+-s -O3 \
+-o ../bin/silgy_watcher
