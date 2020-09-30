@@ -1,5 +1,5 @@
 # IP2Loc
-This is the demo project for [IP2Location](https://www.ip2location.com) Contest.
+This is the demo web application for [IP2Location](https://www.ip2location.com) Contest.
 
 It shows visits history with location, based on [IP2Location™ LITE IP-COUNTRY](https://lite.ip2location.com/database/ip-country) free database and [Silgy](https://github.com/silgy/silgy) as a web application framework.
 
