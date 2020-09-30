@@ -1,12 +1,20 @@
 # ip2loc
-IP2Location Demo (web application)
+This is the demo project for [IP2Location](https://www.ip2location.com) Contest.
+
+It shows visits history with location, based on [IP2Location™ LITE IP-COUNTRY](https://lite.ip2location.com/database/ip-country) free database and [Silgy](https://github.com/silgy/silgy) as a web application framework.
 
 ## Live
 It's live here: [silgy.org:2020](http://silgy.org:2020)
 
 ## Installation (UNIX/Linux)
 
-### 1. Local MySQL database needs to contain two tables:
+### 1. Install C++ compiler and MySQL:
+```
+sudo yum install -y gcc-c++
+sudo yum install -y mysql-server mysql
+```
+
+### 2. Create a database `ip2loc` and create two tables:
 
 * `ip2location_db3` (as per [IP2Location cheat sheet](https://lite.ip2location.com/database/ip-country-region-city))
 * `visits`:
@@ -34,21 +42,20 @@ create table visits
 );
 ```
 
-### 2. Install C++ compiler and MySQL:
-```
-sudo yum install -y gcc-c++
-sudo yum install -y mysql-server mysql
-```
-
 ### 3. Download or clone this repository
 
 ### 4. Make `src/m` executable:
 ```
-cd ip2loc/src
+cd src
 chmod u+x m
 ```
 
-### 5. Compile: `m`
+### 5. Compile
+```
+cd src
+m
+```
+You may need to verify MySQL include and library paths in `m`. It's been tested on a fresh AWS EC2 instance (`Amazon Linux AMI release 2018.03`).
 
 ### 6. Verify $SILGYDIR in `bin/silgystart` and `bin/silgystop`
 
