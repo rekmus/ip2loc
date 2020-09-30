@@ -66,7 +66,11 @@ m
 
 ### 6. Prepare `bin/silgystart` and `bin/silgystop`
 * Verify `$SILGYDIR` is correct (the existing code assumes it's `/home/ec2-user/ip2loc`)
-* Make the executable
+* Make them executable:
+```
+chmod u+x silgystart
+chmod u+x silgystop
+```
 
 ### 7. Run 
 ```
