@@ -19,7 +19,9 @@ Optionally:
 sudo yum install -y mysql-devel
 ```
 
-### 2. Create a database `ip2loc` and create two tables:
+### 2. Download or clone this repository
+
+### 3. Create a database `ip2loc` and create two tables:
 
 * `ip2location_db3` (as per [IP2Location cheat sheet](https://lite.ip2location.com/database/ip-country-region-city))
 * `visits`:
@@ -47,7 +49,7 @@ create table visits
 );
 ```
 
-### 3. Download or clone this repository
+The database name and credentials are in `bin/silgy.conf'.
 
 ### 4. Make `src/m` executable:
 ```
