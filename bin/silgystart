@@ -1,1 +1,28 @@
+#!/bin/sh
 
+export SILGYDIR=/home/ec2-user/ip2loc
+
+export SILGY_SVC_PROCESSES=2
+
+sudo sh -c 'echo 16384 > /proc/sys/fs/mqueue/msgsize_max'
+
+# ---------------------------------------------------------------------
+
+echo "Starting Silgy App..."
+
+# ---------------------------------------------------------------------
+# Main app
+
+nohup $SILGYDIR/bin/silgy_app > /dev/null 2>&1 &
+
+sleep 1
+
+# ---------------------------------------------------------------------
+# Services
+
+for i in `seq 1 $SILGY_SVC_PROCESSES`
+do
+    nohup $SILGYDIR/bin/silgy_svc > /dev/null 2>&1 &
+done
+
+sleep 1  # return to prompt
