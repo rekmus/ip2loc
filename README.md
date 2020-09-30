@@ -6,7 +6,7 @@ It's live here: [silgy.org:2020](http://silgy.org:2020)
 
 ## Installation (UNIX/Linux)
 
-1. Local MySQL database needs to contain two tables:
+### 1. Local MySQL database needs to contain two tables:
 
 * `ip2location_db3` (as per [IP2Location cheat sheet](https://lite.ip2location.com/database/ip-country-region-city))
 * `visits`:
@@ -34,22 +34,22 @@ create table visits
 );
 ```
 
-1. Install C++ compiler and MySQL:
+### 2. Install C++ compiler and MySQL:
 ```
 sudo yum install -y gcc-c++
 sudo yum install -y mysql-server mysql
 ```
 
-1. Download or clone this repository
+### 3. Download or clone this repository
 
-1. Make `src/m` executable:
+### 4. Make `src/m` executable:
 ```
 cd ip2loc/src
 chmod u+x m
 ```
 
-1. Compile: `m`
+### 5. Compile: `m`
 
-1. Verify $SILGYDIR in `bin/silgystart` and `bin/silgystop`
+### 6. Verify $SILGYDIR in `bin/silgystart` and `bin/silgystop`
 
-1. Run `bin/silgystart`
+### 7. Run `bin/silgystart`
