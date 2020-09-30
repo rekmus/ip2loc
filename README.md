@@ -3,15 +3,20 @@ This is the demo project for [IP2Location](https://www.ip2location.com) Contest.
 
 It shows visits history with location, based on [IP2Location™ LITE IP-COUNTRY](https://lite.ip2location.com/database/ip-country) free database and [Silgy](https://github.com/silgy/silgy) as a web application framework.
 
-## Live
+## Live instance
 It's live here: [silgy.org:2020](http://silgy.org:2020)
 
 ## Installation (UNIX/Linux)
+The demo is running on AWS EC2 Linux instance (`Amazon Linux AMI release 2018.03`).
 
 ### 1. Install C++ compiler and MySQL:
 ```
 sudo yum install -y gcc-c++
 sudo yum install -y mysql-server mysql
+```
+Optionally:
+```
+sudo yum install -y mysql-devel
 ```
 
 ### 2. Create a database `ip2loc` and create two tables:
@@ -55,8 +60,9 @@ chmod u+x m
 cd src
 m
 ```
-You may need to verify MySQL include and library paths in `m`. It's been tested on a fresh AWS EC2 instance (`Amazon Linux AMI release 2018.03`).
+(You may need to verify MySQL include and library paths in `m`, depending on your configuration)
 
 ### 6. Verify $SILGYDIR in `bin/silgystart` and `bin/silgystop`
+The existing code assumes it's `/home/ec2-user/ip2loc`.
 
 ### 7. Run `bin/silgystart`
