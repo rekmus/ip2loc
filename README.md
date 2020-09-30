@@ -49,7 +49,7 @@ create table visits
 );
 ```
 
-The database name and credentials are in `bin/silgy.conf'.
+The database name and credentials are in `bin/silgy.conf`.
 
 ### 4. Make `src/m` executable:
 ```
