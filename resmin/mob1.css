@@ -13,38 +13,42 @@ a[href^=tel] {
 .jumbotron {
     padding-top: 10px;
     padding-right: 18px;
-//    height: 96px;
-//    height: 130px;
-    height: 127px;
+//    height: 120px;  // 1 wiersz menu
+//    height: 142px;  // 2 wiersze menu
+    height: 172px;  // 3 wiersze menu
 }
 
 h1 {
     display: inline-block;
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-right: 0px;
+    font-size: 25pt;
 }
 
+
+// 0.85 of the desktop version
+
 .logo {
-    width: 62px;
-    height: 48px;
-    margin-right: 5px;
+    width: 53px;
+    height: 41px;
+    margin-right: 4px;
 }
 
 h2 {
     text-align: center;
-//    margin-top: 50px;
-    margin-top: 45px;
+    margin-top: 40px;
+    font-size: 21pt;
 }
 
 h3 {
-//    margin-top: 30px;
-    margin-top: 27px;
+    margin-top: 30px;
     font-size: 16pt;
     margin-bottom: 20px;
 }
 
 h4 {
-    margin-top: 24px;
+    margin-top: 25px;
     font-size: 14pt;
     margin-bottom: 12px;
 }
@@ -54,40 +58,30 @@ th, td {
 }
 
 table {
+    width: 100%;
     border-collapse: separate;
 }
 
 input[type="date"]::-webkit-inner-spin-button{display:none;}::-webkit-clear-button{display:none;}
 input[type="number"]::-webkit-inner-spin-button{display:none;}
 
-input[type="number"] {-moz-appearance:textfield; height:1.86em;}
-
-input[type="text"] {height:1.86em;}
-input[type="date"] {height:1.86em;}
-select {height:1.86em;}
-
 
 /* padding: top right bottom left; */
 
 .main_img {
-    margin: 0px 10px 0px 10px;
-    max-width: 300px;
-    border: 2px solid white;
-}
-.main_img:hover {
-    margin: 0px 10px 0px 10px;
-    max-width: 300px;
-    border: 2px solid #17a2b8;
-    cursor: pointer;
+    max-width: 106px;
+    padding: 0px;
 }
 
 .mw300 {
-    margin: 12px 10px 0px 10px;
-    max-width: 300px;
+    max-width: 106px;
+    margin-top: 12px;
+    padding: 0px 2px 0px 2px;
 }
 
-.mapa_old {width: 800px; height: 500px;}
-.mapa {width: 900px; height: 620px;}
+//.row {margin-left: 0px; margin-right: 0px;}
+
+.mapa {width: 320px; height: 320px; display: inline-block;}
 .podt {font-size:14pt; text-align:center; margin-top:20px;}
 .pt {padding-top: 5px;}
 .f13 {font-size:13pt;}
@@ -95,9 +89,12 @@ select {height:1.86em;}
 .mt {padding:3px 5px;}
 .p2 {padding:2px 7px;}
 .pr {padding-right: 80px;}
+.wt {display:none; position:fixed; top:0; left:0; width:100%; height:100%; z-index:100; background:url(wait.gif) 50% 50% no-repeat; background-size:52px;}
 .ct {text-align:center;}
 .rt {text-align:right;}
-.m4px {margin-top:4px;}
+.m4px {margin-top:3px;}
+// main menu line height
+.mmlh {line-height:28px;}
 .m05 {margin-top:0.5em;}
 .m10 {margin-top:1em;}
 .m15 {margin-top:1.5em;}
@@ -106,6 +103,7 @@ select {height:1.86em;}
 .m30 {margin-top:3em;}
 .m40 {margin-top:4em;}
 .m50 {margin-top:5em;}
+.ml05 {margin-left: 0.5em;}
 .ml1 {margin-left: 1em;}
 .ti1 {text-indent: 1em;}
 .ti2 {text-indent: 2em;}
@@ -115,15 +113,15 @@ select {height:1.86em;}
 .mb3 {margin-bottom:2.3em;}
 .hd {width:72%; margin-left:14%;}
 .gb {background: #f0f0f0;}
-.vshort {width:9em;}
-.shorter {width:18em;}
-.shorterplus {width:27em;}
-.longer {width:36em;}
+.vshort {width:50%;}
+.shorter {width:100%;}
+.shorterplus {width:100%;}
+.longer {width:100%;}
 .larger {font-size:15pt;}
-.msg {color:#b40000; margin-bottom:12px; display:none; border:1px solid #b40000; padding:6px 10px;}
-.brd_red {margin-left:25%; length:50%; margin-right:25%; border:1px solid #b40000; padding:6px 10px;}
-.brd_ylw {margin-left:25%; length:50%; margin-right:25%; border:1px solid #b09000; padding:6px 10px;}
-.brd_grn {margin-left:25%; length:50%; margin-right:25%; border:1px solid #00a000; padding:6px 10px;}
+.msg {color:#b40000; margin-bottom:12px; display:none; border:1px solid #b40000; padding:5px;}
+.brd_red {margin-left:5%; length:90%; margin-right:5%; border:1px solid #b40000; padding:5px;}
+.brd_ylw {margin-left:5%; length:90%; margin-right:5%; border:1px solid #b09000; padding:5px;}
+.brd_grn {margin-left:5%; length:90%; margin-right:5%; border:1px solid #00a000; padding:5px;}
 
 // ----------------------------------------
 // center
@@ -169,7 +167,6 @@ select {height:1.86em;}
 {
 //    border: 1px solid grey;
 //    display: inline-block;
-    margin: 15px;
     padding: 12px;
     background: #f0f0f0;
 }
@@ -185,9 +182,8 @@ select {height:1.86em;}
 
 .mmi
 {
-    display: inline;
     font-size:14pt;
-    margin: 6px;
+    margin: 3px;
 }
 
 // ----------------------------------------
@@ -197,9 +193,9 @@ select {height:1.86em;}
 {
 //    border: 1px solid grey;
     display: inline-block;
-    margin: 30px;
     padding: 12px;
     vertical-align: top;
+    width: 100%;
 }
 
 .mr {
@@ -221,7 +217,7 @@ select {height:1.86em;}
 .w96p {width:96%;}
 .w100p {width:100%;}
 .wbtn {width:5.6em;}
-.vwbtn {width:9em;}
+.vwbtn {width:8em;}
 .h15 {height:1.5em;}
 .h18 {height:1.8em;}
 .h20 {height:2em;}
@@ -237,30 +233,12 @@ select {height:1.86em;}
 
 .bor {border:1px solid grey;}
 
-// wide ----------------------------------------------------------------------
-.rlform {margin-top:50px; margin-left:10%; width:54%; text-align:right;}
-
-// middle --------------------------------------------------------------------
-@media (max-width:1000px)
-{
-    .rlform {margin-top:50px; margin-left:0px; width:70%;}
-}
-// narrow --------------------------------------------------------------------
-@media (max-width:550px)
-{
-    .rlform {margin-top:50px; margin-left:0px; width:90%;}
-}
-
+// phone input label
+//.pil {margin-bottom:0px;}
+.mb8 {margin-bottom:8px;}
+.mb0 {margin-bottom:0px;}
+.rlform {margin-top:50px; margin-left:5%; width:90%;}
 .rlbutton {margin-top:20px; height:36px; width:20%; margin-right:10%;}
-
-.rlbtnspan
-{
-//    margin-top: 20px;
-    width: 50%;
-    display: inline-block;
-    text-align: left;
-}
-
 th {background-color:#f0f0f0;}
 .gre {color:white; height:2.8em; background:#509050; background:linear-gradient(#88d188, #274d27); border:1px solid #6aa46a; border-radius:4px; padding-bottom:0.24em;}
 .gre:hover {background:#476d47; background:linear-gradient(#659e65, #274d27);}
@@ -269,8 +247,15 @@ th {background-color:#f0f0f0;}
 .btr {width:8em;}
 .btw {width:11em;}
 .w15em {width:15em;}
-.w20em {width:20em;}
+.w20em {width:19em;}
 .vat {vertical-align: top;}
 .vab {vertical-align: bottom;}
+// modal window
+.mw {font-size:12pt; background-color:white; padding:3px 8px 10px 11px; box-shadow:4px 4px 16px 0px rgba(0,0,0,0.2); border:1px solid #cccccc;}
+.mwmt {margin-top:6px;}
+// close
+.cl {font-size:1.5em; cursor:pointer;}
+// yes/no buttons
+.ynb {width:80px; height:32px; margin-top:20px;}
 
 //td,th {border-collapse:collapse; border:1px solid #d8d8d8; padding:3px 6px;}
