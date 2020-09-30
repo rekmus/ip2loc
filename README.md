@@ -77,5 +77,8 @@ chmod u+x silgystop
 cd bin
 ./silgystart
 ```
+
+Don't forget to add an inbound security rule to allow traffic to your port.
+
 ## Troubleshooting
 `logs` directory should contain something useful. Anyway I'll be happy to help at silgy.help@gmail.com.
